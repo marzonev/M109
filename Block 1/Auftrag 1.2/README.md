@@ -33,9 +33,10 @@
 
 - **Was sind Cloud Service Modelle?**  
     Die drei Hauptmodelle sind:  
-    1. Infrastructure-as-a-Service (IaaS)  
-    2. Platform-as-a-Service (PaaS)  
-    3. Software-as-a-Service (SaaS)
+    1. On-Premis
+    2. Infrastructure-as-a-Service (IaaS)  
+    3. Platform-as-a-Service (PaaS)  
+    4. Software-as-a-Service (SaaS)
 
 - **Was ist der wesentliche Unterschied zwischen Monitoring und Logging in der Cloud?**  
     - **Monitoring**: Überwachung der Systemleistung und -verfügbarkeit in Echtzeit.  
