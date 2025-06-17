@@ -7,11 +7,11 @@
     Laut NIST (National Institute of Standards and Technology) ist Cloud Computing ein Modell, das den universellen, komfortablen und bedarfsgesteuerten Netzwerkzugriff auf einen Pool gemeinsam genutzter konfigurierbarer Ressourcen (z. B. Netzwerke, Server, Speicher, Anwendungen und Dienste) ermöglicht.
 
 - **Welches sind die 5 Merkmale einer Cloud?**  
-    1. On-Demand Self-Service  
-    2. Breiter Netzwerkzugriff
-    3. Ressourcen-Pooling  
-    4. Schnelle Elastizität  
-    5. Messbarer Service (Pay-as-you-go)
+    1. On-Demand Self-Service
+    2. Broad Network Access
+    3. Resource Pooling
+    4. Rapid Elasticity
+    5. Measurable Service (Pay-as-you-go)
 
 - **Welche Cloud Dienstleistungen kennen Sie?**  
     Beispiele für Cloud-Dienstleistungen sind:  
