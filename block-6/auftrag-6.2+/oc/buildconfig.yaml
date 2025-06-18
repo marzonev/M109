@@ -26,10 +26,11 @@ spec:
     type: Git
     git:
       uri: 'https://github.com/marzonev/M109.git'
-    contextDir: /block-6/auftrag-6.2%2B/app
+    contextDir: /block-6/auftrag-6.2+/app
     sourceSecret:
       name: marzonev-repo-access
   triggers:
+    - type: ImageChange
     - type: Generic
       generic:
         secretReference:
