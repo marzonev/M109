@@ -1,0 +1,33 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: html-openshift-app
+  labels:
+    app: html-openshift-app
+    app.kubernetes.io/part-of: html-openshift-app
+spec:
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/marzonev/M109.git'
+    contextDir: /block-6/auftrag-6.2+/app
+    sourceSecret:
+      name: marzonev-repo-access
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        namespace: openshift
+        name: 'nginx:1.24-ubi9'
+  runPolicy: Serial
+  triggers:
+    - type: ImageChange
+    - type: GitHub
+      github:
+        secretReference:
+          name: github-webhook
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'html-openshift-app:latest'
