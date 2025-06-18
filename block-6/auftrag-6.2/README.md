@@ -2,6 +2,8 @@
 
 ## Deployment
 
+Deployment ist für die Aufsetzung des Containers
+
 ```k8s
 kind: Deployment
 apiVersion: apps/v1
@@ -30,7 +32,11 @@ spec:
         imagePullPolicy: Always
 ```
 
+[Deployment-file](oc/deployment.yaml)
+
 ## Service
+
+Service ist für die Netzwerkkonfiguration im Cluster.
 
 ```k8s
 kind: Service
@@ -48,7 +54,15 @@ spec:
       targetPort: 8080
   selector:
     app: html-openshift-app
----
+```
+
+[Service-file](oc/service.yaml)
+
+## Route
+
+Route ist für die Netzwerkkonfiguration für externen Zugriff auf den Container.
+
+```
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
@@ -66,3 +80,5 @@ spec:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
 ```
+
+[Route-file](oc/route.yaml)

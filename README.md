@@ -41,6 +41,10 @@ Einen ganzen Ordner kann man mit dem Parameter `--recursive` machen.
 oc apply -f /diddyblud --recursive
 ```
 
+#### Ressourcen mit selben Tag löschen
+```K8s
+oc delete all --selector=app=html-openshift-app
+```
 ## Kubernetes
 
 
