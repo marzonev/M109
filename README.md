@@ -45,9 +45,6 @@ oc apply -f /diddyblud --recursive
 ```K8s
 oc delete all --selector=app=html-openshift-app
 ```
-## Kubernetes
-
-
 
 ## Wichtige Begriffe
 
