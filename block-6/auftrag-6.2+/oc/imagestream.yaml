@@ -5,3 +5,4 @@ metadata:
   labels:
     app: html-openshift-app
     app.kubernetes.io/part-of: html-openshift-app
+spec:
