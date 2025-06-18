@@ -62,6 +62,8 @@ spec:
 
 Route ist für die Netzwerkkonfiguration für externen Zugriff auf den Container.
 
+Das ist von Openshift und ist nicht im Standart Kubernetes. Das sieht man, da bei der apiVersion eine openshift api verwendet wird.
+
 ```
 kind: Route
 apiVersion: route.openshift.io/v1

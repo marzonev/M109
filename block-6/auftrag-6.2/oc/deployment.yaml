@@ -9,11 +9,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: html-openshift-app
+      app: html-openshift-app # Verbindung zum Pod
   template:
     metadata:
       labels:
-        app: html-openshift-app
+        app: html-openshift-app 
     spec:
       containers:
       - name: html-openshift-app

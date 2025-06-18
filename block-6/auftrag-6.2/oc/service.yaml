@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: html-openshift-app
+  name: html-openshift-app # Hostname
   labels:
     app: html-openshift-app
     app.kubernetes.io/part-of: html-openshift-app
@@ -9,7 +9,7 @@ spec:
   ports:
     - name: http
       protocol: TCP
-      port: 8080
+      port: 8080 
       targetPort: 8080
-  selector:
+  selector: #Verbindung zum Pod
     app: html-openshift-app
