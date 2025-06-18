@@ -58,3 +58,32 @@ Cloud-Provider investieren einmal in riesige Rechenzentren → dann verteilen si
 | Große Mengen an Servern kaufen | Günstigere Stückpreise bei Hardware           |
 | Automatisierung von Prozessen  | Weniger Personal = niedrigere Kosten          |
 | Standardisierte Services       | Weniger Komplexität = effizientere Verwaltung |
+
+### Service Modelle
+
+![servicemodels](media/servicemodels.png)
+
+### 5 Merkmale einer Cloud?
+
+1. On-Demand Self-Service
+2. Broad Network Access
+3. Resource Pooling
+4. Rapid Elasticity
+5. Measurable Service (Pay-as-you-go)
+
+### Wichtige Container Engines
+
+- Docker
+- Budha
+- Podman
+- CRI-O
+
+### Wichtige Container Orchistration
+
+- Docker Swarm/Compose
+- Kubernetes
+
+### Wichtige "Container Orchistration Enhancments"
+
+- Openshift
+- Tanzu
