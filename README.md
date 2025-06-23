@@ -52,7 +52,7 @@ oc delete all --selector=app=html-openshift-app
 
 ### Economies of Scale
 
-**Je mehr Kunden sie bedienen, desto günstiger wird der Betrieb pro Kunde.**s
+**Je mehr Kunden sie bedienen, desto günstiger wird der Betrieb pro Kunde.**
 
 Cloud-Provider investieren einmal in riesige Rechenzentren → dann verteilen sie die Kosten auf Millionen Kunden:
 
@@ -90,3 +90,18 @@ Cloud-Provider investieren einmal in riesige Rechenzentren → dann verteilen si
 
 - Openshift
 - Tanzu
+
+### Cloud Deployment Modelle
+
+1. **Public Cloud**  
+   Die Public Cloud wird von einem Anbieter betrieben und ist für jeden zugänglich. Ressourcen wie Speicher oder Rechenleistung werden über das Internet bereitgestellt. Beispiele: AWS, Microsoft Azure, Google Cloud.
+
+2. **Private Cloud**  
+   Die Private Cloud wird nur von einer Organisation genutzt. Sie bietet mehr Kontrolle und Sicherheit, da die Infrastruktur entweder vor Ort oder in einem dedizierten Rechenzentrum betrieben wird.
+
+3. **Hybrid Cloud**  
+   Die Hybrid Cloud kombiniert Public und Private Clouds. Daten und Anwendungen können zwischen beiden Umgebungen verschoben werden, um Flexibilität und Skalierbarkeit zu gewährleisten.
+
+4. **Community Cloud**  
+   Die Community Cloud wird von mehreren Organisationen mit ähnlichen Anforderungen geteilt. Sie eignet sich für Gruppen, die gemeinsame Ziele oder Sicherheitsanforderungen haben, wie z. B. Behörden oder Forschungseinrichtungen.
+
