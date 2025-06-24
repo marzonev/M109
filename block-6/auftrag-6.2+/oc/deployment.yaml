@@ -9,17 +9,36 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: html-openshift-app # Verbindung zum Pod
+      app: html-openshift-app
   template:
     metadata:
+      creationTimestamp: null
       labels:
-        app: html-openshift-app 
+        app: html-openshift-app
     spec:
       containers:
-      - name: html-openshift-app
-        resources: {}
-        ports:
-        - containerPort: 8080
-          protocol: TCP
-        image: image-registry.openshift-image-registry.svc:5000/254201-zlic-nmarzo1/html-openshift-app
-        imagePullPolicy: Always
+        - name: html-openshift-app
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/254201-zlic-nmarzo1/html-openshift-app
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: Always
+          env: []
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+      imagePullSecrets: []
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600
+  paused: false
