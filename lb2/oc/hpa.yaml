@@ -1,0 +1,56 @@
+kind: HorizontalPodAutoscaler
+apiVersion: autoscaling/v2
+metadata:
+  name: counter-backend
+  labels:
+    app: counter-backend
+    app.kubernetes.io/part-of: counter-app
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    name: counter-backend
+    apiVersion: apps/v1
+  minReplicas: 2
+  maxReplicas: 3
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 80
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 80
+---
+kind: HorizontalPodAutoscaler
+apiVersion: autoscaling/v2
+metadata:
+  name: counter-frontend
+  labels:
+    app: counter-frontend
+    app.kubernetes.io/part-of: counter-app
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    name: counter-frontend
+    apiVersion: apps/v1
+  minReplicas: 2
+  maxReplicas: 4
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 80
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 80
+
