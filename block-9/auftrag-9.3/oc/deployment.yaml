@@ -1,0 +1,35 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: petclinic-app-mysql
+  labels:
+    app: petclinic-app-mysql
+    app.kubernetes.io/part-of: petclinic-app-mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: petclinic-app-mysql # Verbindung zum Pod
+  template:
+    metadata:
+      labels:
+        app: petclinic-app-mysql 
+    spec:
+      containers:
+      - name: petclinic-app-mysql
+        resources: {}
+        ports:
+        - containerPort: 3306
+          protocol: TCP
+        env:
+          - name: MYSQL_USER
+            value: petclinic
+          - name: MYSQL_PASSWORD
+            value: petclinic
+          - name: MYSQL_ROOT_PASSWORD
+            value: petclinic
+          - name: MYSQL_DATABASE
+            value: petclinic
+        image: image-registry.openshift-image-registry.svc:5000/openshift/mysql@sha256:ac25ce04966621fb2ad47f99cbf6644f39822a1efcad8cbd0d49fb1222215f73
+        imagePullPolicy: Always
+---

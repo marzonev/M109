@@ -1,0 +1,25 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: petclinic-app-mysql
+  labels:
+    app.openshift.io/runtime: mysql-database
+    template: mysql-ephemeral-template
+    template.openshift.io/template-instance-owner: 18cc0840-36a9-423b-afe1-abed0e693b84
+spec:
+  clusterIP: 172.30.140.116
+  ipFamilies:
+    - IPv4
+  ports:
+    - name: mysql
+      protocol: TCP
+      port: 3306
+      targetPort: 3306
+  internalTrafficPolicy: Cluster
+  clusterIPs:
+    - 172.30.140.116
+  type: ClusterIP
+  ipFamilyPolicy: SingleStack
+  sessionAffinity: None
+  selector:
+    name: petclinic-app-mysql
