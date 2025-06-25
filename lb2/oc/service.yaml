@@ -1,0 +1,47 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: counter-database # Hostname
+  labels:
+    app: counter-database
+    app.kubernetes.io/part-of: counter-app
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 5432
+      targetPort: 5432
+  selector: #Verbindung zum Pod
+    app: counter-database
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: counter-backend # Hostname
+  labels:
+    app: counter-backend
+    app.kubernetes.io/part-of: counter-app
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector: #Verbindung zum Pod
+    app: counter-backend
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: counter-frontend # Hostname
+  labels:
+    app: counter-frontend
+    app.kubernetes.io/part-of: counter-app
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
+  selector: #Verbindung zum Pod
+    app: counter-frontend
